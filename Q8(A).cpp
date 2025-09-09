@@ -1,18 +1,21 @@
-//Write a program to input a year and check whether it is a leap year or not using conditional statementS
+//Write a program to input a character and check whether it is an uppercase alphabet, lowercase alphabet, digit, or special character.
 #include <stdio.h>
 
 int main() {
-    int year;
+    char ch;
 
-    printf("Enter a year: ");
-    scanf("%d", &year);
+    printf("Enter a character: ");
+    scanf(" %c", &ch);
 
-    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
-        printf("%d is a leap year.\n", year);
+    if (ch >= 'A' && ch <= 'Z')
+        printf("%c is an uppercase alphabet.\n", ch);
+    else if (ch >= 'a' && ch <= 'z')
+        printf("%c is a lowercase alphabet.\n", ch);
+    else if (ch >= '0' && ch <= '9')
+        printf("%c is a digit.\n", ch);
     else
-        printf("%d is not a leap year.\n", year);
+        printf("%c is a special character.\n", ch);
 
     return 0;
 }
-
 
